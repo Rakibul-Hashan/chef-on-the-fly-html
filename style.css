@@ -3,6 +3,7 @@
 p {
   font-family: "Manrope", sans-serif;
   font-weight: 400;
+  line-height: 150%;
 }
 
 /* Global CSS */
@@ -10,6 +11,9 @@ p {
   margin: 0;
   padding: 0;
   font-family: "Bebas Neue", sans-serif;
+}
+a {
+  text-decoration: none;
 }
 menu,
 ul {
@@ -31,16 +35,18 @@ ul {
 .h3 {
   font-size: 32px;
   line-height: 130%;
+  font-weight: 400;
 }
 .h4 {
   font-size: 24px;
   line-height: 150%;
+  font-weight: 400;
 }
 .h5 {
   font-size: 20px;
   line-height: 150%;
 }
-.h5 {
+.h6 {
   font-size: 18px;
   line-height: 150%;
 }
@@ -62,6 +68,25 @@ ul {
 }
 .primary-btn-color {
   background-color: #871cbb;
+}
+
+.flex-container {
+  display: flex;
+  gap: 200px;
+  align-items: center;
+}
+.centered-btn {
+  margin: 0 auto;
+  display: block;
+}
+.p-block {
+  padding-block-start: 120px;
+  padding-block-end: 120px;
+}
+.content-wrapper {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
 }
 /* layout */
 
@@ -107,6 +132,159 @@ menu {
   border: none;
 }
 
+/* Hero Section */
+.hero-section {
+  padding: 52px 0 80px 0;
+  background-image: url(./assets/images/hero-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero-section .flex-container {
+  display: flex;
+  gap: 200px;
+  align-items: center;
+}
+.hero-section .large-title {
+  font-weight: 400;
+}
+/* Solving section */
+.solving-section-title {
+  text-align: center;
+}
+.solution-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 36px;
+  border-bottom: 10px solid;
+  padding-bottom: 25px;
+  gap: 30px;
+}
+.solution-1 {
+  background-color: #fff4fb;
+  border-bottom: 10px solid #ffd7f0;
+}
+.solution-2 {
+  background-color: #fef5f0;
+  border-bottom: 10px solid #ffd9c3;
+}
+.solution-3 {
+  background-color: #f6f7fb;
+  border-bottom: 10px solid #c8d3ff;
+}
+.staffing-solutions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 33px 0 38px 0;
+}
+.who-we-are .content-wrapper {
+  margin-block-start: 24px;
+  margin-block-end: 40px;
+}
+.who-we-are-image {
+  max-width: 455px;
+  height: 400px;
+}
+
+/* 
+  ** Satisfied Clients section
+*/
+.clients {
+  margin-top: 40px;
+}
+
+.satisfied-clients ul {
+  display: flex;
+  gap: 30px;
+  padding: 40px;
+  background: #fff4fb;
+  border-radius: 10px;
+}
+.satisfied-clients h3 {
+  text-align: center;
+}
+
+.satisfied-clients {
+  padding-block-end: 60px;
+}
+
+/* 
+  ** 🛑 END Satisfied Clients section
+*/
+
 /* ############## Home Page ######################### */
+
+/* FOOTER */
+
+footer {
+  padding: 80px 0;
+  background-color: #202248;
+}
+.footer-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 4fr;
+  gap: 70px;
+}
+
+/* company info */
+.company-info h3{
+  color: #fff;
+  margin-bottom: 15px;
+}
+.company-info p {
+  color: #fff;
+}
+.social-icons {
+  display: flex;
+  gap: 25px;
+  margin-top: 24px;
+}
+.social-icons .icon i {
+  font-size: 20px;
+  color: #fff;
+}
+.social-icons .icon {
+  width: 52px;
+  background: #2a2c5c;
+  border-radius: 20px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-icons .icon:hover {
+  background-color: #871cbb;
+}
+/* Footer Quick links */
+.quick-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer-link {
+  color: #c1b9c5;
+}
+.about-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+/* contact links */
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.footer-link__contact,
+.footer-link__contact span {
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  gap: 24px;
+}
+
+/* ############## About Page ######################### */
 
 /* Media queries */

@@ -1,0 +1,89 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container {
+    width: auto;
+  }
+  .header-section{
+    justify-content: space-between;
+    position: relative;
+    padding: 20px;
+}
+  
+  main {
+    overflow-x: hidden;
+  }
+  .menu-btn-wrapper{
+
+  }
+  .menu-btn-wrapper .btn-container {
+    display: none;
+  }
+
+  /* Hamburger menu */
+  menu {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+  #menu-toggle:checked ~ menu {
+    transform: translateX(-400px);
+  }
+
+  menu {
+    position: absolute;
+    background: #fff;
+    padding: 20px 10px;
+    transform: translateX(500px);
+    transition: transform 0.5s ease;
+    width: 200px;
+    z-index: 999;
+    border: 1px solid;
+    top: 10px;
+  }
+  /* Toggle icon */
+  .hamburger-menu span {
+    background: #333;
+    border-radius: 2px;
+    display: block;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+    transition: 0.4s;
+  }
+  #menu-toggle:checked + .hamburger-menu span:first-child {
+    transform: translate(0, 5px) rotate(45deg);
+  }
+  #menu-toggle:checked + .hamburger-menu span:nth-child(2) {
+    opacity: 0;
+  }
+  #menu-toggle:checked + .hamburger-menu span:last-child {
+    transform: translate(0, -8px) rotate(-45deg);
+  }
+}
+
+/* 
+--
+--
+--
+
+X
+*/
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
