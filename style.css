@@ -12,6 +12,21 @@ p {
   padding: 0;
   font-family: "Bebas Neue", sans-serif;
 }
+
+:root {
+  /* font */
+  --large-title: 56px;
+  --h1: 48px;
+  --h2: 40px;
+  --h3: 32px;
+  --h4: 24px;
+  --h5: 20px;
+  --h6: 18px;
+  --body-01: 18px;
+  --body-02: 16px;
+  --body-03: 14px;
+  --body-04: 12px;
+}
 a {
   text-decoration: none;
 }
@@ -21,45 +36,64 @@ ul {
 }
 /* style guide */
 .large-title {
-  font-size: 56px;
+  font-size: var(--large-title);
   line-height: 120%;
 }
+
 .h1 {
-  font-size: 48px;
+  font-size: var(--h1);
   line-height: 130%;
 }
+
 .h2 {
-  font-size: 40px;
+  font-size: var(--h2);
   line-height: 130%;
 }
+
 .h3 {
-  font-size: 32px;
+  font-size: var(--h3);
   line-height: 130%;
   font-weight: 400;
 }
+
 .h4 {
-  font-size: 24px;
+  font-size: var(--h4);
   line-height: 150%;
   font-weight: 400;
 }
+
 .h5 {
-  font-size: 20px;
+  font-size: var(--h5);
   line-height: 150%;
 }
+
 .h6 {
-  font-size: 18px;
+  font-size: var(--h6);
   line-height: 150%;
 }
+
 .body-01 {
-  font-size: 18px;
+  font-size: var(--body-01);
   line-height: 150%;
 }
+
 .body-02 {
-  font-size: 16px;
+  font-size: var(--body-02);
   line-height: 167%;
 }
+
 .body-03 {
-  font-size: 14px;
+  font-size: var(--body-03);
+  line-height: 167%;
+}
+
+.body-04 {
+  font-size: var(--body-04);
+  line-height: 167%;
+}
+
+.body-05 {
+  font-size: var(--body-05);
   line-height: 167%;
 }
 /* colors */
@@ -140,9 +174,19 @@ menu {
   background-size: cover;
 }
 .hero-section .flex-container {
-  display: flex;
-  gap: 200px;
+  display: grid;
+  gap: 0;
   align-items: center;
+  grid-template-areas: "hero-content hero-image";
+  grid-template-columns: 1fr auto;
+}
+
+.hero-image {
+  max-width: 720px;
+  grid-area: hero-image;
+}
+.hero-image img {
+  width: 100%;
 }
 .hero-section .large-title {
   font-weight: 400;
@@ -229,7 +273,7 @@ footer {
 }
 
 /* company info */
-.company-info h3{
+.company-info h3 {
   color: #fff;
   margin-bottom: 15px;
 }
